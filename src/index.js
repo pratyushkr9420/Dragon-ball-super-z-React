@@ -78,7 +78,7 @@ const App = () => {
                     <option value='Namek'>Namek</option>
                     <option value='Earthling'>Earthling</option>
                 </select>
-                <button disabled = {!species || !name || !finalForm}>Add a new character</button>
+                <button className='btn btn-warning' disabled = {!species || !name || !finalForm}>Add a new character</button>
             </form>
             <ul>
                 {
@@ -88,7 +88,7 @@ const App = () => {
                                 {character.name}< br/>
                                 species: {character.species}< br/>
                                 final form: {character.finalTransformation}< br/>
-                                power level: {character.powerLevel}<button onClick = {() => decrement(character)}>-</button><button onClick={ () => increment(character)}>+</button><button onClick ={ ()=>destroy(character)}>x</button>
+                                power level: {character.powerLevel}<button className='btn btn-light' onClick = {() => decrement(character)}>-</button><button className='btn btn-light' onClick={ () => increment(character)}>+</button><button className='btn btn-light' onClick ={ ()=>destroy(character)}>x</button>
                                 <br />
                                 <br />
                                 <br />
